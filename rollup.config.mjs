@@ -1,14 +1,14 @@
 // Plugins
-import analyze from 'rollup-plugin-analyzer'
+import analyze from "rollup-plugin-analyzer";
 import commonjs from "@rollup/plugin-commonjs";
-import minifyCss from "./rollup-plugin-node-minify";
+import minifyCss from "./rollup-plugin-node-minify.mjs";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import replace from "@rollup/plugin-replace";
 import strip from "@rollup/plugin-strip";
 import typescript from "@rollup/plugin-typescript";
 import { babel } from "@rollup/plugin-babel";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
-import { terser } from "rollup-plugin-terser";
+import terser from "@rollup/plugin-terser";
 
 const defaultPlugins = [
   peerDepsExternal(),

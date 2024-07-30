@@ -1,7 +1,10 @@
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 import minifyCore from "@node-minify/core";
 import cleanCss from "@node-minify/clean-css";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const name = "node-minify";
 const exec = async (input, output) => {
