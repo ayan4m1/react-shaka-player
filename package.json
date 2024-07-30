@@ -1,5 +1,5 @@
 {
-  "name": "@mkhuda/react-shaka-player",
+  "name": "@ayan4m1/react-shaka-player",
   "version": "1.2.2",
   "description": "React video player built with Shaka-Player",
   "main": "dist/index.js",
@@ -82,12 +82,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mkhuda/react-shaka-player.git"
+    "url": "git+https://github.com/ayan4m1/react-shaka-player.git"
   },
   "bugs": {
-    "url": "https://github.com/mkhuda/react-shaka-player/issues"
+    "url": "https://github.com/ayan4m1/react-shaka-player/issues"
   },
-  "homepage": "https://github.com/mkhuda/react-shaka-player#readme",
+  "homepage": "https://github.com/ayan4m1/react-shaka-player#readme",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

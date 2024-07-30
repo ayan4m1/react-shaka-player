@@ -1,33 +1,35 @@
-# @mkhuda/react-shaka-player 
-[![Build Status](https://app.travis-ci.com/mkhuda/react-shaka-player.svg?branch=main)](https://app.travis-ci.com/mkhuda/react-shaka-player) [![npm version](https://badge.fury.io/js/%40mkhuda%2Freact-shaka-player.svg)](https://badge.fury.io/js/%40mkhuda%2Freact-shaka-player) ![npm](https://img.shields.io/npm/v/shaka-player?label=shaka-player)
+# @ayan4m1/react-shaka-player
 
-React video player built on top of [Shaka Player](https://github.com/google/shaka-player). 
-> [DEMO](https://csb-pygk8-mkhuda.vercel.app/)
+[![Build Status](https://app.travis-ci.com/ayan4m1/react-shaka-player.svg?branch=main)](https://app.travis-ci.com/ayan4m1/react-shaka-player) [![npm version](https://badge.fury.io/js/%40ayan4m1%2Freact-shaka-player.svg)](https://badge.fury.io/js/%40ayan4m1%2Freact-shaka-player) ![npm](https://img.shields.io/npm/v/shaka-player?label=shaka-player)
+
+React video player built on top of [Shaka Player](https://github.com/google/shaka-player).
+
+> [DEMO](https://csb-pygk8-ayan4m1.vercel.app/)
 
 > [CODESANDBOX](https://codesandbox.io/s/keen-dewdney-pygk8)
 
-> [ROADMAP](https://github.com/mkhuda/react-shaka-player/wiki/Initial-Roadmap)
+> [ROADMAP](https://github.com/ayan4m1/react-shaka-player/wiki/Initial-Roadmap)
 
-> [EXAMPLE & USAGES](https://github.com/mkhuda/react-shaka-player/wiki/Usages-&-Examples)
+> [EXAMPLE & USAGES](https://github.com/ayan4m1/react-shaka-player/wiki/Usages-&-Examples)
 
 ## Installation
 
-Use the package manager [yarn](https://classic.yarnpkg.com/en/) or [npm](https://www.npmjs.com/) to install `@mkhuda/react-shaka-player`.
+Use the package manager [yarn](https://classic.yarnpkg.com/en/) or [npm](https://www.npmjs.com/) to install `@ayan4m1/react-shaka-player`.
 
 ```bash
-yarn add @mkhuda/react-shaka-player shaka-player
+yarn add @ayan4m1/react-shaka-player shaka-player
 
 or
 
-npm install @mkhuda/react-shaka-player shaka-player
+npm install @ayan4m1/react-shaka-player shaka-player
 ```
 
 ## Usage
 
 ```javascript
 // import the css. Now we have custom ui.css
-import "@mkhuda/react-shaka-player/dist/ui.css";
-import { ReactShakaPlayer } from "@mkhuda/react-shaka-player";
+import "@ayan4m1/react-shaka-player/dist/ui.css";
+import { ReactShakaPlayer } from "@ayan4m1/react-shaka-player";
 
 function App() {
   return <ReactShakaPlayer autoPlay={true} src={"https://yourvideohere.mpd"} />;
@@ -37,8 +39,8 @@ function App() {
 ## Manual Handle Usage
 
 ```javascript
-import "@mkhuda/react-shaka-player/dist/ui.css";
-import { ReactShakaPlayer } from "@mkhuda/react-shaka-player";
+import "@ayan4m1/react-shaka-player/dist/ui.css";
+import { ReactShakaPlayer } from "@ayan4m1/react-shaka-player";
 
 function App() {
   let [mainPlayer, setMainPlayer] = useState({});
@@ -72,21 +74,21 @@ function App() {
 
 This is main props for the components:
 
-|Props                |Optional       |Description                         |Type                         |
-|----------------|--------|-------------------------------|-----------------------------|
-|src|No|MPD or HLS to play            |string           |
-|className |Yes| string of ui overlay classname | string |
-|autoPlay|Yes| as it described | boolean |
-|superConfig|Yes|The special configs for Streaming or VOD. Will add more `superConfig` soon.      | string ("STREAMING" / "VOD")            |
-|config |Yes|Changes configuration settings on Shaka Player. Reference: [shaka.extern.PlayerConfiguration](https://shaka-player-demo.appspot.com/docs/api/shaka.extern.html#.PlayerConfiguration). This config will override `superConfig`.      | object            |
-|uiConfig |Yes|Changes configuration settings for UI elements. Reference: [shaka.extern.UIConfiguration](https://shaka-player-demo.appspot.com/docs/api/shaka.extern.html#.UIConfiguration). This config will override `superConfig`.      | object            |
-|onLoad |Yes|Catch `Shaka.Player`, `Shaka.ui.Overlay` and `HTMLVideoElement` for manual usages or improvement of configuration. see: [PlayerRefs](https://github.com/mkhuda/react-shaka-player/blob/c4459e31027a08165007d03c9a08ff8a3e5de3dc/src/types/index.ts#L3) |object: PlayerRefs => func|
-|onPlay |Yes|Catch when media is playing |func|
-|onPlause |Yes|Catch when media is paused |func|
-|onEnded |Yes|Catch when video is end |func|
-|onBuffering |Yes|Catch `onBuffering` status when playing |bool => func|
-|onPlayerError |Yes|Catch `error` when playing. Reference: [Shaka.Player.ErrorEvent](https://shaka-player-demo.appspot.com/docs/api/shaka.Player.html#.event:ErrorEvent) |{Shaka.extern.Error} => func|
-|onStatsChanged |Yes|Catch `stats` when playing video, including currentTime (current seek position), and currentEndTime (length of video duration if VOD) (in seconds) of media player element [`IStats`]. Reference: [IStats & Shaka.extern.Stats](https://shaka-player-demo.appspot.com/docs/api/shaka.extern.html#.Stats) |{Shaka.extern.Stats} => func|
+| Props          | Optional | Description                                                                                                                                                                                                                                                                                              | Type                         |
+| -------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| src            | No       | MPD or HLS to play                                                                                                                                                                                                                                                                                       | string                       |
+| className      | Yes      | string of ui overlay classname                                                                                                                                                                                                                                                                           | string                       |
+| autoPlay       | Yes      | as it described                                                                                                                                                                                                                                                                                          | boolean                      |
+| superConfig    | Yes      | The special configs for Streaming or VOD. Will add more `superConfig` soon.                                                                                                                                                                                                                              | string ("STREAMING" / "VOD") |
+| config         | Yes      | Changes configuration settings on Shaka Player. Reference: [shaka.extern.PlayerConfiguration](https://shaka-player-demo.appspot.com/docs/api/shaka.extern.html#.PlayerConfiguration). This config will override `superConfig`.                                                                           | object                       |
+| uiConfig       | Yes      | Changes configuration settings for UI elements. Reference: [shaka.extern.UIConfiguration](https://shaka-player-demo.appspot.com/docs/api/shaka.extern.html#.UIConfiguration). This config will override `superConfig`.                                                                                   | object                       |
+| onLoad         | Yes      | Catch `Shaka.Player`, `Shaka.ui.Overlay` and `HTMLVideoElement` for manual usages or improvement of configuration. see: [PlayerRefs](https://github.com/ayan4m1/react-shaka-player/blob/c4459e31027a08165007d03c9a08ff8a3e5de3dc/src/types/index.ts#L3)                                                  | object: PlayerRefs => func   |
+| onPlay         | Yes      | Catch when media is playing                                                                                                                                                                                                                                                                              | func                         |
+| onPlause       | Yes      | Catch when media is paused                                                                                                                                                                                                                                                                               | func                         |
+| onEnded        | Yes      | Catch when video is end                                                                                                                                                                                                                                                                                  | func                         |
+| onBuffering    | Yes      | Catch `onBuffering` status when playing                                                                                                                                                                                                                                                                  | bool => func                 |
+| onPlayerError  | Yes      | Catch `error` when playing. Reference: [Shaka.Player.ErrorEvent](https://shaka-player-demo.appspot.com/docs/api/shaka.Player.html#.event:ErrorEvent)                                                                                                                                                     | {Shaka.extern.Error} => func |
+| onStatsChanged | Yes      | Catch `stats` when playing video, including currentTime (current seek position), and currentEndTime (length of video duration if VOD) (in seconds) of media player element [`IStats`]. Reference: [IStats & Shaka.extern.Stats](https://shaka-player-demo.appspot.com/docs/api/shaka.extern.html#.Stats) | {Shaka.extern.Stats} => func |
 
 ## Contributing
 
